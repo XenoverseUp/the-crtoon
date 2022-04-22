@@ -1,0 +1,26 @@
+.stripe {
+  height: 5rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-bg-dark);
+  margin: calc(var(--padding-vertical-home-body) / 2);
+
+  .sliding-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 1rem 0;
+    filter: grayscale(0.5);
+
+    .img-container {
+      width: auto;
+      height: 100%;
+      opacity: 0.5;
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

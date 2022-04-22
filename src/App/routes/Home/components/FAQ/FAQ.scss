@@ -1,0 +1,38 @@
+.faq {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-bg-dark);
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--color-bg-light);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: var(--width-max);
+    padding: var(--padding-vertical-home-body) var(--padding-vertical);
+    padding-top: calc(var(--padding-vertical-home-body) + 3rem);
+    margin: 0 auto;
+
+    .faq-header {
+      margin-bottom: 2rem;
+
+      & > span {
+        opacity: 0.8;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+
+        span {
+          color: rgb(4, 207, 89);
+        }
+      }
+    }
+  }
+}

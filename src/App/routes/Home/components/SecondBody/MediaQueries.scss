@@ -1,0 +1,12 @@
+@media screen and (max-width: 800px) {
+  .second-body {
+    .wrapper {
+      grid-template-columns: 100%;
+      grid-template-rows: 3fr 4fr;
+
+      article {
+        grid-row: 2;
+      }
+    }
+  }
+}

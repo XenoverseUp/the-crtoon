@@ -1,0 +1,106 @@
+@media screen and (max-width: 800px) {
+  .e-mail {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 1.5rem;
+
+    .content {
+      margin-bottom: 2rem;
+    }
+
+    form {
+      width: 100%;
+      .MuiTextField-root {
+        flex-grow: 1;
+        width: unset;
+        max-width: 300px;
+      }
+    }
+  }
+
+  footer.footer {
+    height: auto;
+
+    section {
+      & > aside {
+        height: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  footer.footer {
+    padding: 0;
+
+    section {
+      padding: 1.5rem;
+
+      main {
+        flex-direction: column;
+        gap: 2rem;
+
+        aside {
+          height: auto;
+          width: 100% !important;
+
+          &:last-child {
+            flex-direction: row;
+          }
+        }
+      }
+
+      & > aside {
+        height: 2rem;
+
+        & > div {
+          h6 {
+            font-size: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .e-mail {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 1.5rem;
+
+    .content {
+      margin-bottom: 2rem;
+    }
+
+    form {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .email-input {
+        width: 100%;
+        max-width: unset;
+      }
+
+      button {
+        margin-top: 1rem;
+        margin-left: auto;
+      }
+    }
+  }
+
+  footer.footer {
+    section {
+      & > aside {
+        height: 2rem;
+
+        & > div {
+          h6 {
+            font-size: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+}

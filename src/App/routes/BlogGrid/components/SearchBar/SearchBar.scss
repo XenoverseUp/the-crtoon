@@ -1,0 +1,23 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg-dark);
+  border-radius: 9999px;
+  overflow: hidden;
+  width: min(3rem, 100%);
+  height: min(3rem, 100%);
+
+  svg {
+    padding: 0.9rem;
+    font-size: 1.25rem;
+    box-sizing: content-box;
+    flex-shrink: 0;
+  }
+
+  input {
+    outline: none;
+    background-color: unset;
+    border: none;
+    flex-grow: 1;
+  }
+}

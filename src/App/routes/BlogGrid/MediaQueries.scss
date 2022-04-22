@@ -1,0 +1,26 @@
+@media screen and (max-width: 950px) {
+  .blog-one {
+    .wrapper {
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        .blog-grid {
+          padding-right: 0;
+        }
+
+        .blog-highlights {
+          min-width: unset;
+
+          .highlight {
+            .highlight-content {
+              .info {
+                font-size: min(calc(0.1rem + 2.2vw), 0.8rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

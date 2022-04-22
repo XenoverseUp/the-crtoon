@@ -1,0 +1,231 @@
+.blog-single {
+  width: 100%;
+
+  .wrapper {
+    max-width: var(--width-max);
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem var(--padding-vertical);
+    display: flex;
+    padding-top: 6rem;
+    flex-direction: column;
+    align-items: center;
+
+    & > img {
+      width: calc(100% + 2 * var(--padding-vertical));
+      max-height: 30rem;
+      object-fit: cover;
+
+      @media screen and (min-width: 924px) {
+        border-radius: 1rem;
+        width: 100%;
+      }
+    }
+
+    .main-content {
+      width: 100%;
+      max-width: 750px;
+      margin: 0 auto;
+      margin-top: 3rem;
+
+      .single-blog-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+
+        span {
+          margin-bottom: 1rem;
+          display: flex;
+          align-items: center;
+          width: max-content;
+          gap: 0.5em;
+          font-weight: 300;
+
+          svg {
+            font-size: 0.75rem;
+            color: var(--color-primary);
+          }
+        }
+
+        p {
+          opacity: 0.8;
+        }
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & > p {
+          line-height: var(--height-line);
+          letter-spacing: 0.02em;
+          text-align: justify;
+
+          &:first-child:first-letter {
+            color: var(--color-primary);
+            float: left;
+            font-size: 97px;
+            line-height: 77px;
+            padding-top: 4px;
+            padding-right: 3px;
+            font-family: Georgia, "Times New Roman", Times, serif;
+          }
+        }
+
+        figure {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 1rem 0;
+          gap: 0.75rem;
+          text-align: center;
+
+          & > img {
+            width: calc(100% + 2 * var(--padding-vertical));
+            max-height: 30rem;
+            object-fit: cover;
+
+            @media screen and (min-width: 924px) {
+              border-radius: 1rem;
+              width: 100%;
+            }
+          }
+
+          figcaption {
+            font-size: 0.85rem;
+            font-weight: 300;
+          }
+        }
+
+        h2,
+        h3 {
+          margin-top: 1rem;
+        }
+
+        blockquote {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          margin: 2rem 0;
+          gap: 1rem;
+
+          p {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size: 1.5rem;
+            opacity: 0.8;
+            font-style: italic;
+            line-height: 1.5 !important;
+            margin: 0;
+            position: relative;
+            text-shadow: 0 1px white;
+
+            &::before {
+              font-family: inherit;
+              content: "\201C";
+              color: var(--color-primary);
+              font-size: 7.5em;
+              font-weight: 700;
+              opacity: 0.25;
+              position: absolute;
+              top: -0.4em;
+              left: -0.2em;
+              text-shadow: none;
+              z-index: -300;
+            }
+          }
+
+          cite {
+            opacity: 0.75;
+
+            &::before {
+              content: "~";
+            }
+          }
+        }
+      }
+
+      .recommendeds {
+        margin: 4rem 0;
+
+        h5 {
+          font-size: 2rem;
+
+          span {
+            color: var(--color-primary);
+          }
+        }
+
+        .container {
+          display: flex;
+          margin-top: 1rem;
+          gap: 1rem;
+
+          .recommended-card {
+            flex-shrink: 0;
+            width: 30%;
+            background-color: var(--color-bg-dark);
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            padding: 0.7rem;
+            transition: ease-in-out 0.15s all;
+
+            img {
+              width: 100%;
+              height: 10rem;
+              object-fit: cover;
+              border-radius: 0.8rem;
+              transition: inherit;
+            }
+
+            &:hover {
+              transform: scale(1.025);
+
+              img {
+                transform: scale(1.005);
+                box-shadow: 0 0.5px 1.6px rgba(0, 0, 0, 0.031),
+                  0 1.1px 3.7px rgba(0, 0, 0, 0.045),
+                  0 1.9px 6.7px rgba(0, 0, 0, 0.055),
+                  0 3.2px 11.1px rgba(0, 0, 0, 0.065),
+                  0 5.3px 18.3px rgba(0, 0, 0, 0.075),
+                  0 9.2px 31.9px rgba(0, 0, 0, 0.089),
+                  0 20px 69px rgba(0, 0, 0, 0.12);
+              }
+            }
+
+            h6 {
+              font-size: 0.9rem;
+              line-height: var(--height-line);
+              margin-top: 0.5rem;
+              padding: 0 0.2em;
+            }
+
+            span {
+              margin-top: 1rem;
+              font-size: 0.75rem;
+              display: flex;
+              align-items: center;
+              gap: 0.5em;
+
+              svg {
+                color: var(--color-primary);
+              }
+            }
+          }
+
+          @media screen and(max-width: 750px) {
+            flex-direction: column;
+
+            .recommended-card {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

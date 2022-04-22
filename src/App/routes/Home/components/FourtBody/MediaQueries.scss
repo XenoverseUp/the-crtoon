@@ -1,0 +1,49 @@
+@media screen and (max-width: 900px) {
+  .fourth-body {
+    .wrapper {
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        align-items: center;
+
+        article {
+          & > p {
+            text-align: center;
+          }
+
+          .download {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 3rem;
+            gap: 3rem;
+            position: relative;
+
+            &::after {
+              content: "or";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              opacity: 0.75;
+            }
+
+            .download-app-button {
+              .content {
+                span {
+                  font-size: 0.6rem;
+                }
+
+                p {
+                  font-size: 1rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

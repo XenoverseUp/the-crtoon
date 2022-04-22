@@ -1,0 +1,37 @@
+@media screen and (max-width: 900px) {
+  .slide {
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 2rem;
+
+      article {
+        text-align: center;
+        padding-right: var(--padding-vertical);
+        padding-left: var(--padding-vertical);
+
+        .slide-header {
+          margin-bottom: 1rem;
+
+          .info {
+            justify-content: center;
+
+            span {
+              font-size: 0.75rem;
+            }
+          }
+        }
+
+        .controllers {
+          justify-content: center;
+          align-items: center;
+          margin-top: 2rem;
+        }
+      }
+
+      aside {
+        border-radius: 0;
+      }
+    }
+  }
+}

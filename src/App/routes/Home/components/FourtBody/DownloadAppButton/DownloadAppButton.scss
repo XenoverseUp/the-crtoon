@@ -1,0 +1,45 @@
+.download-app-button {
+  display: flex;
+  padding: 0.5rem 0.7rem;
+  background-color: var(--color-typo);
+  color: var(--color-bg-light);
+  align-items: center;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  gap: 0.5rem;
+  text-decoration: none;
+
+  .icon {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    &.apple {
+      svg {
+        margin-top: -0.3rem;
+      }
+    }
+
+    svg {
+      height: 90%;
+      width: 90%;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    span {
+      font-size: calc(0.5rem + 0.1vw);
+      font-weight: 300;
+      margin-bottom: -0.2em;
+    }
+
+    p {
+      font-size: calc(0.6rem + 0.3vw);
+    }
+  }
+}

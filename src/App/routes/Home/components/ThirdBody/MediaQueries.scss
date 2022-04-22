@@ -1,0 +1,8 @@
+@media screen and (max-width: 800px) {
+  .third-body {
+    .wrapper {
+      grid-template-columns: 100%;
+      grid-template-rows: 3fr 4fr;
+    }
+  }
+}

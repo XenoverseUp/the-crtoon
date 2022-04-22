@@ -1,0 +1,64 @@
+@media screen and (max-width: 900px) {
+  .main-item {
+    .main-item-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 500px;
+      gap: 2rem;
+
+      .close {
+        right: 1rem;
+        top: 0.75rem;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25rem;
+        box-sizing: content-box;
+        padding: 0.15em;
+
+        svg {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .cover {
+        width: 100%;
+      }
+
+      .content {
+        gap: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-item {
+    .main-item-wrapper {
+      .close {
+        position: fixed;
+      }
+
+      .content {
+        .flip-header {
+          h5 {
+            font-size: 1rem;
+          }
+
+          .info {
+            span {
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

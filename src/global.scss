@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-primary: rgb(4, 207, 89);
+  --color-menu-secondary-bg: #252525;
+  --color-typo: #191919;
+  --color-bg-light: #fff;
+  --color-bg-dark: rgb(250, 250, 250);
+  --padding-vertical: 5rem;
+  --width-max: 1280px;
+  --height-line: 1.75em;
+  --size-cursor-inner: 7.5px;
+  --size-cursor-outer: 45px;
+
+  scroll-padding-top: 4rem;
+  scroll-behavior: smooth;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: none !important;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  user-select: none;
+  width: 100%;
+}
+
+body {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.App {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --padding-vertical: 2rem;
+  }
+}

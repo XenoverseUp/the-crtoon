@@ -1,0 +1,13 @@
+@media screen and (max-width: 1225px) {
+  .grid-item {
+    &.most {
+      margin-bottom: 0;
+    }
+
+    .info {
+      span {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.home {
+  --padding-vertical-home-body: 7rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+section {
+  &:nth-child(-n + 4) {
+    .wrapper {
+      min-height: min(80vh, 50rem);
+    }
+  }
+}
+.third-body {
+  .wrapper {
+    min-height: min(80vh, 50rem);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home {
+    --padding-vertical-home-body: 4rem;
+  }
+}

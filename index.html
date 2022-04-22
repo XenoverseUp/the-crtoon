@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/src/favicon.png" sizes="16x16" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRTOON</title>
+    <style>
+      #loader {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2001;
+      }
+
+      #secondary-bg {
+        background-color: var(--color-primary);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      #primary-bg {
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #loader-content {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        flex-direction: column;
+      }
+
+      #loader-content h1 {
+        display: inline-flex;
+        overflow: hidden;
+        font-size: 2.5rem;
+      }
+
+      #loader-content h1 .word {
+        margin: 0 0.5rem;
+        overflow: hidden;
+        display: inline-flex;
+        gap: 0.075em;
+      }
+
+      .letter {
+        opacity: 0;
+      }
+
+      .progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--color-primary);
+        height: 0.2rem;
+        width: 0;
+        animation: progress ease-in-out 2s forwards;
+      }
+
+      @keyframes progress {
+        0% {
+          width: 0;
+          opacity: 0;
+        }
+        15% {
+          width: 15%;
+          opacity: 1;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loader">
+      <div id="secondary-bg"></div>
+      <div id="primary-bg">
+        <div id="loader-content">
+          <div class="progress"></div>
+          <h1 class="loader-header">
+            <div class="word">
+              <span class="letter">T</span>
+              <span class="letter">H</span>
+              <span class="letter">E </span>
+            </div>
+            <div class="word">
+              <span class="letter">C</span>
+              <span class="letter">R</span>
+              <span class="letter">T</span>
+              <span class="letter">O</span>
+              <span class="letter">O</span>
+              <span class="letter">N</span>
+            </div>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script type="module">
+      import gsap, { Power3 } from "gsap";
+
+      const tl = gsap.timeline();
+
+      gsap.to(".letter", {
+        opacity: 1,
+        duration: 0,
+      });
+
+      tl.from(".letter", {
+        y: "100%",
+        skewY: 20,
+        opacity: 0,
+        stagger: 0.025,
+        delay: 0.4,
+        duration: 0.75,
+        ease: Power3.easeInOut,
+      }).to("#loading-text", {
+        opacity: 1,
+      });
+    </script>
+  </body>
+</html>

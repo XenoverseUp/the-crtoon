@@ -1,0 +1,19 @@
+@media screen and (max-width: 800px) {
+  .intro {
+    grid-template-columns: 100%;
+    grid-template-rows: 3fr 4fr;
+
+    article {
+      grid-row: 2 / 3;
+      width: 100%;
+      padding: var(--padding-vertical-home-body) var(--padding-vertical);
+
+      .contributors {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+}

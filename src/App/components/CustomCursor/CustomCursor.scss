@@ -1,0 +1,55 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--size-cursor-inner);
+  height: var(--size-cursor-inner);
+  border-radius: 50%;
+  background-color: #000;
+  z-index: 2000;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pointer {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    background-color: var(--color-primary);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-align: center;
+    padding-left: 0.3rem;
+    transform: scale(0);
+  }
+}
+
+.outer {
+  width: var(--size-cursor-outer);
+  height: var(--size-cursor-outer);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1999;
+  pointer-events: none;
+
+  svg {
+    width: var(--size-cursor-outer);
+    height: var(--size-cursor-outer);
+    background-color: transparent;
+    animation: rotate linear 10s infinite;
+
+    text {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: black;
+    }
+  }
+}

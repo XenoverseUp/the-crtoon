@@ -1,0 +1,10 @@
+@media screen and (max-width: 1080px) {
+  .pricing {
+    .wrapper {
+      .container {
+        flex-direction: column;
+        gap: 8rem;
+      }
+    }
+  }
+}

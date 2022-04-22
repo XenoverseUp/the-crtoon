@@ -1,0 +1,55 @@
+header {
+  width: 100%;
+  height: 4rem;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+
+  .blurry-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .inner-header {
+    margin: 0 auto;
+    padding: 0 var(--padding-vertical);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      z-index: 11;
+      a {
+        font-weight: 700;
+        font-weight: 1.5rem;
+        text-decoration: none;
+        color: var(--color-typo);
+      }
+    }
+
+    .menu-button {
+      z-index: 11;
+      button {
+        border: none;
+        outline: none;
+        background-color: unset;
+        cursor: pointer;
+        font-size: 0.8rem;
+        color: var(--color-typo);
+
+        span {
+          &:last-child {
+            opacity: 0;
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
